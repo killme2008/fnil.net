@@ -1,0 +1,264 @@
+<html>
+  <head>
+    <title>control.core - control API documentation</title>
+    <link href="static/favicon.png" rel="icon" />
+    <link href="static/favicon.png" rel="shortcut icon" />
+    <link media="all" type="text/css" href="static/clojure.css" rel="stylesheet" />
+    <link media="all" type="text/css" href="static/wiki.css" rel="stylesheet" />
+    <link media="all" type="text/css" href="static/internal.css" rel="stylesheet" />
+    <style>.menuWrapper{height: 36px;}</style>
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" href="http://www.wikispaces.com/_/2009051601/s/internal_ie.css" type="text/css" />
+    <![endif]-->
+  </head>
+<!--
+This document was auto-generated from the source by the clojure autodoc system.
+To report errors or ask questions about the overall documentation structure, formatting,
+etc., contact Tom Faulhaber (google mail name: tomfaulhaber).
+For errors in the documentation of a particular namespace, contact the author of that
+namespace.
+-->
+  <body>
+    <div id="AllContentContainer">
+      <div id="Header">
+	<a id="Logo" href="index.html"><img alt="Clojure" height="100" width="100" src="static/clojure-icon.gif" /></a>
+	<h1><a title="page header title" id="page-header" href="index.html">control</a></h1>
+      </div>
+      <div id="leftcolumn"><div style="text-align: center;"></div>
+<div class="menu">
+  <div class="WikiCustomNav WikiElement wiki">
+    <span class="toc-header"><span id="project-name">control</span> <span id="version"></span> API</span><br />
+    <ul>
+      <li><a class="wiki_link" href="index.html">Overview</a></li>
+      <li><a class="wiki_link" href="api-index.html">API Index</a></li>
+    </ul>
+    <div class="NamespaceTOC">
+      <span class="toc-header">Namespaces</span>
+      <ul id="left-sidebar-list">
+        <li><a href="control.commands-api.html" class="wiki_link">control.commands</a></li><li><a href="control.core-api.html" class="wiki_link">control.core</a></li><li><a href="control.main-api.html" class="wiki_link">control.main</a></li><li><a href="leiningen.control-api.html" class="wiki_link">leiningen.control</a></li>
+      </ul>
+    </div>
+    
+    <a href="http://clojure.org" class="wiki_link">Clojure Home</a>
+  </div>
+</div>
+</div>
+      <div id="rightcolumn">
+	<div id="Content">
+	  <div class="contentBox"><div class="innerContentBox">
+              <div id="content_view" class="wiki wikiPage">
+                <div id="right-sidebar"><div id="toc">
+  <h1 class="nopad">Table of Contents</h1>
+  <div style="margin-left: 1em;" class="toc-section">
+    <a href="#toc0">Overview</a>
+    <div style="margin-left: 1em;" class="toc-entry">
+      <a href="#control.core/call">call</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#control.core/clear-options!">clear-options!</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#control.core/defcluster">defcluster</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#control.core/deftask">deftask</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#control.core/exists?">exists?</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#control.core/local">local</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#control.core/rsync">rsync</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#control.core/scp">scp</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#control.core/set-options!">set-options!</a>
+    </div><div style="margin-left: 1em;" class="toc-entry">
+      <a href="#control.core/ssh">ssh</a>
+    </div>
+    <br />
+  </div>
+</div>
+</div>
+                <div id="content-tag"><h1 id="overview">API for <span id="namespace-name">control.core</span>
+  - <span id="header-project">control</span> <span id="header-version"></span>
+  </h1>
+
+<br />Full namespace name: <span id="long-name">control.core</span>
+<p></p>
+<h2>Overview</h2>
+<pre id="namespace-docstr"></pre>
+
+
+<br />
+<h2>Public Variables and Functions</h2>
+<div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="control.core/call">call</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (call task &amp; args)
+</pre>
+  <pre id="var-docstr">Call other tasks in deftask,for example:
+(call :ps "java")</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="control.core/clear-options!">clear-options!</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (clear-options!)
+</pre>
+  <pre id="var-docstr">Clear global options</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="control.core/defcluster">defcluster</h2>
+  <span id="var-type">macro</span><br />
+  <pre id="var-usage">Usage: (defcluster cname &amp; args)
+</pre>
+  <pre id="var-docstr">Define a cluster including some remote machines,for example:
+      (defcluster :mycluster
+                :user "login"
+                :addresses ["a.domain.com" "b.domain.com"])
+
+ Please see <a href="https://github.com/killme2008/clojure-control/wiki/Define-clusters">https://github.com/killme2008/clojure-control/wiki/Define-clusters</a>
+</pre>
+  <span class="var-added"><span id="content">Added in control version 0.1</span><br /></span>
+  
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="control.core/deftask">deftask</h2>
+  <span id="var-type">macro</span><br />
+  <pre id="var-usage">Usage: (deftask tname &amp; decl)
+</pre>
+  <pre id="var-docstr">Define a task for executing on remote machines:
+ (deftask :date "Get date from remote machines"
+           (ssh "date"))
+
+Please see <a href="https://github.com/killme2008/clojure-control/wiki/Define-tasks">https://github.com/killme2008/clojure-control/wiki/Define-tasks</a></pre>
+  <span class="var-added"><span id="content">Added in control version 0.1</span><br /></span>
+  
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="control.core/exists?">exists?</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (exists? file)
+</pre>
+  <pre id="var-docstr">Check if a file or directory is exists</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="control.core/local">local</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (local cmd)
+</pre>
+  <pre id="var-docstr">Execute command on local machine</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="control.core/rsync">rsync</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (rsync src dst &amp; opts)
+</pre>
+  <pre id="var-docstr">Rsync local files to remote machine's files,for example:
+   (deftask :deploy "scp files to remote machines" []
+  (rsync "src/" ":/home/login"))
+
+  Valid options:
+  :rsync-options  -- rsync options string
+</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="control.core/scp">scp</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (scp local remote &amp; opts)
+</pre>
+  <pre id="var-docstr">Copy local files to remote machines:
+ (scp "test.txt" "remote.txt")
+ (scp ["1.txt" "2.txt"] "/home/deploy/" :sudo true :mode 755)
+
+Valid options:
+  :sudo  -- whether to copy files to remote machines as root
+  :mode -- files permission on remote machines
+  :scp-options -- scp options string</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="control.core/set-options!">set-options!</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (set-options! key value &amp; kvs)
+</pre>
+  <pre id="var-docstr">Set global options for ssh,scp and rsync,
+ key and value  could be:
+
+    Key                               Value
+:ssh-options        a ssh options string,for example "-o ConnectTimeout=3000"
+:scp-options       a scp options string
+:rsync-options    a rsync options string.
+:user                    global user for cluster,if cluster do not have :user ,it will use this by default.
+:parallel               if to execute task on remote machines in parallel,default is false
+:error-mode      mode-keyword,:exit (exit when error happends,the default error mode). or :exception (throw an exception).
+
+Example:
+      (set-options! :ssh-options "-o ConnectTimeout=3000")
+
+</pre>
+  
+  
+  
+</div><div id="var-entry">
+  <br />
+  <hr />
+  <h2 id="control.core/ssh">ssh</h2>
+  <span id="var-type">function</span><br />
+  <pre id="var-usage">Usage: (ssh cmd &amp; opts)
+</pre>
+  <pre id="var-docstr">Execute commands via ssh:
+(ssh "date")
+(ssh "ps aux|grep java")
+(ssh "sudo apt-get update" :sudo true)
+
+Valid options:
+:sudo   whether to run commands as root,default is false
+:ssh-options  -- ssh options string</pre>
+  
+  
+  
+</div>
+
+
+</div>
+              </div>
+            </div>
+          </div>
+	</div>
+	<div id="foot">
+	  <div style="text-align: center;" id="copyright">No copyright info </div>
+	</div>
+      </div>
+      <div id="DesignedBy">Logo &amp; site design by <a title="Visit Tom Hickey's website." href="http://www.tomhickey.com">Tom Hickey</a>.<br />
+      Clojure auto-documentation system by Tom Faulhaber.</div>
+    </div>
+    <!-- /AllContentContainer -->
+  </body>
+
+</html>
