@@ -4,10 +4,11 @@
     <title>庄周梦蝶</title>
     <meta name="keywords" content="dennis zhuang killme2008">
     <meta name="description" content="Dennis zhuang's personal website">
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-	<link href="css/bootstrap-responsive.css" rel="stylesheet">
-    <link href="css/docs.css" rel="stylesheet">
-    <link href="css/prettify.css" rel="stylesheet">
+    <link href="stylesheets/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="stylesheets/bootstrap-responsive.css" rel="stylesheet">
+    <link href="stylesheets/docs.css" rel="stylesheet">
+    <link href="stylesheets/prettify.css" rel="stylesheet">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
   </head>
   <body data-spy="scroll" data-target=".bs-docs-sidebar">
 	<!-- Navbar
@@ -75,13 +76,45 @@
 			<iframe id="sina_widget_2652916941" class="github-btn" allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="30px" src="http://v.t.sina.com.cn/widget/widget_blog.php?uid=2652916941&height=500&skin=wd_01&showpic=1"></iframe>
 		  </li>
 		</ul>
-		<hr class="soften">
+	  </div>
+	</div>
+	<hr class="soften">
+	<div class="container">
+
+	  <div class="marketing">
+		<div class="row-fluid">
+		  <div class="span6" >
+			<h3>Recent wiki updates</h3>			
+			<div id="wiki_updates">
+			</div>
+		  </div>
+		  <div class="span6" >
+			<h3>Recent blog posts</h3>			
+			<div id="blog_posts">
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+	<footer class="footer">
+      <div class="container">
+        <p class="pull-right"><a href="#">Back to top</a></p>
 		<p>&copy;2011, <a href="http://fnil.net">fnil.net</a>. All Rights Reserved.</p>
 		<p><script type="text/javascript" src="http://js.tongji.linezing.com/1535812/tongji.js"></script><noscript><a href="http://www.linezing.com"><img src="http://img.tongji.linezing.com/1535812/tongji.gif"/></a></noscript>
 		</p>
 	  </div>
-	</div>
+	</footer>
+
 	<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	<script type="text/javascript">
+	  $.get ("/widget?type=wiki",function (resp){
+	  $("#wiki_updates").html(resp);
+	  });
+	  $.get ("/widget?type=blog",function (resp){
+	  $("#blog_posts").html(resp);
+	  });
+	</script>
   </body>
 </html>
 
