@@ -29,7 +29,7 @@ app.configure('development', function(){
 	app.use(express.errorHandler());
 });
 
-app.get('/widget', widget.widget);
+app.get('/widget/:type', widget.widget);
 
 if (cluster.isMaster) {
 	// Fork workers.

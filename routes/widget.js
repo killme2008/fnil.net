@@ -80,7 +80,7 @@ function requestFeed(key, src, callback){
 }
 
 exports.widget = function(req,res){
-	var type = req.query.type;
+	var type = req.params.type;
 	try{
 		switch(type){
 		case "blog":
