@@ -12,6 +12,8 @@ memcached.on('error', function(e){
 
 var WIKI_UPDATES = 'fnil_net_wiki_updates';
 var BLOG_POSTS = 'fnil_net_blog_posts';
+var GITHUB_ACTIVITY='fnil_github_activity'
+var LIMIT = 6;
 
 function requestWikiUpdates(callback){
 	memcached.get(WIKI_UPDATES, function(err, result){
@@ -46,11 +48,11 @@ function requestWikiUpdates(callback){
 	});
 }
 
-function requestBlogPosts(callback){
-	memcached.get(BLOG_POSTS, function(err,result){
+function requestFeed(key, src, callback){
+	memcached.get(key, function(err,result){
 		if(err || result == null){
 			if(err) console.log(err);
-			feedparser.parseUrl('http://blog.fnil.net/index.php/feed',function(error, meta, articles){
+			feedparser.parseUrl(src,function(error, meta, articles){
 				if(error || articles == null || articles.length == 0){
 					if(callback){
 						callback("No posts");
@@ -58,12 +60,13 @@ function requestBlogPosts(callback){
 					return;
 				}
 				var rt="<ul>";
+				articles = articles.slice(0,LIMIT);
 				articles.forEach(function(article){
 					rt += "<li><a href='"+article.link+"'>"+article.title+"</a></li>";
 				});
 				rt += "</ul>";
 				//cache 20 minutes.
-				memcached.set(BLOG_POSTS,rt ,function(err,result){
+				memcached.set(key,rt,function(err,result){
 					if(err) console.log(err);
 				},1200);
 				if(callback){
@@ -81,7 +84,12 @@ exports.widget = function(req,res){
 	try{
 		switch(type){
 		case "blog":
-			requestBlogPosts(function(result){
+			requestFeed(BLOG_POSTS,'http://blog.fnil.net/index.php/feed', function(result){
+				res.send(result);
+			});
+			break;
+		case "github":
+			requestFeed(GITHUB_ACTIVITY,'https://github.com/killme2008.atom', function(result){
 				res.send(result);
 			});
 			break;

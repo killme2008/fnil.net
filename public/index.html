@@ -86,14 +86,22 @@ and especially, java middlewares such as messaging queue, networking/RPC framewo
 
 	  <div class="marketing">
 		<div class="row-fluid">
-		  <div class="span6" >
+		  <div class="span4" >
 			<h3>Recent wiki updates</h3>			
 			<div id="wiki_updates">
+			  Loading...
 			</div>
 		  </div>
-		  <div class="span6" >
+		  <div class="span4" >
 			<h3>Recent blog posts</h3>			
 			<div id="blog_posts">
+			  Loading...
+			</div>
+		  </div>
+		  <div class="span4" >
+			<h3>Github activity</h3>			
+			<div id="github_activity">
+			  Loading...
 			</div>
 		  </div>
 		</div>
@@ -112,12 +120,9 @@ and especially, java middlewares such as messaging queue, networking/RPC framewo
 
 	<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 	<script type="text/javascript">
-	  $.get ("/widget?type=wiki",function (resp){
-	  $("#wiki_updates").html(resp);
-	  });
-	  $.get ("/widget?type=blog",function (resp){
-	  $("#blog_posts").html(resp);
-	  });
+	  $("#wiki_updates").load("/widget?type=wiki");
+	  $("#blog_posts").load("/widget?type=blog")
+	  $("#github_activity").load("/widget?type=github");
 	</script>
   </body>
 </html>
