@@ -17,6 +17,7 @@ com.taobao.metamorphosis.client.producer
 com.taobao.metamorphosis.client.transaction
 com.taobao.metamorphosis.cluster
 com.taobao.metamorphosis.cluster.json
+com.taobao.metamorphosis.consumer
 com.taobao.metamorphosis.exception
 com.taobao.metamorphosis.gregor
 com.taobao.metamorphosis.gregor.master
@@ -28,6 +29,7 @@ com.taobao.metamorphosis.network
 com.taobao.metamorphosis.server
 com.taobao.metamorphosis.server.assembly
 com.taobao.metamorphosis.server.exception
+com.taobao.metamorphosis.server.filter
 com.taobao.metamorphosis.server.network
 com.taobao.metamorphosis.server.stats
 com.taobao.metamorphosis.server.store
