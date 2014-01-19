@@ -109,9 +109,12 @@
 
 	<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 	<script type="text/javascript">
-	  $("#wiki_updates").load("/widget/wiki");
-	  $("#blog_posts").load("/widget/blog")
-	  $("#github_activity").load("/widget/github");
+	  $(document).ready(function(){
+	      $("#wiki_updates").load("/widget/wiki");
+     	  $("#blog_posts").load("/widget/blog")
+	      $("#github_activity").load("/widget/github");
+    	  $('a').attr('target', '_blank');
+	  });
 	</script>
   </body>
 </html>
