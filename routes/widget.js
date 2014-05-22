@@ -84,7 +84,7 @@ exports.widget = function(req,res){
 	try{
 		switch(type){
 		case "blog":
-			requestFeed(BLOG_POSTS,'http://blog.fnil.net/index.php/feed', function(result){
+			requestFeed(BLOG_POSTS,'http://blog.fnil.net/atom.xml', function(result){
 				res.send(result);
 			});
 			break;
