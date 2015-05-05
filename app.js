@@ -38,7 +38,8 @@ if (cluster.isMaster) {
 	}
 
 	cluster.on('exit', function(worker, code, signal) {
-		console.log('worker ' + worker.process.pid + ' died');
+		console.log('worker ' + worker.process.pid + ' died, restart it...');
+		cluster.fork();
 	});
 } else {
 	// Workers can share any TCP connection
@@ -47,4 +48,3 @@ if (cluster.isMaster) {
 		console.log("Express server listening on port " + app.get('port'));
 	});
 }
-
