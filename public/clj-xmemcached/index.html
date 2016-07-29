@@ -22,7 +22,7 @@
       <h1>
 <a id="clj-xmemcached" class="anchor" href="#clj-xmemcached" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>clj-xmemcached</h1>
 
-<p>An opensource memcached client for clojure wraps <a href="http://code.google.com/p/xmemcached/">xmemcached</a>. <a href="http://code.google.com/p/xmemcached/">Xmemcached</a> is an opensource high performance memcached client for java.</p>
+<p>An opensource memcached client for clojure wraps <a href="http://fnil.net/xmemcached/">xmemcached</a>. <a href="http://fnil.net/xmemcached/">Xmemcached</a> is an opensource high performance memcached client for java.</p>
 
 <h2>
 <a id="leiningen-usage" class="anchor" href="#leiningen-usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Leiningen Usage</h2>
@@ -199,7 +199,7 @@ The value <code>100</code> in <code>set</code> is the expire timeout for the ite
 <h3>
 <a id="transcoders" class="anchor" href="#transcoders" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Transcoders</h3>
 
-<p>We use <a href="http://xmemcached.googlecode.com/svn/trunk/apidocs/net/rubyeye/xmemcached/transcoders/SerializingTranscoder.html">SerializationTranscoder</a> by default,it will encode/decode values using java serialization.
+<p>We use <a href="http://fnil.net/docs/xmemcached/net/rubyeye/xmemcached/transcoders/SerializingTranscoder.html">SerializationTranscoder</a> by default,it will encode/decode values using java serialization.
 But since <code>0.2.2</code>, we provide a new transcoder <code>clj-json-transcoder</code> to encode/decode values using <a href="https://github.com/clojure/data.json">clojure.data.json</a>.It is suitable to integrate with other systems written in other languages.</p>
 
 <p>And we add <code>nippy-transcoder</code> in 0.2.3, it use <a href="https://github.com/ptaoussanis/nippy">nippy</a> for serialization.</p>
@@ -256,6 +256,6 @@ Elapsed time: 18445.409 msecs
 
     </section>
 
-  
+
   </body>
 </html>
