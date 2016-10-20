@@ -38,6 +38,7 @@ app.get('/github/webhook',function(req, res){
 
   exec(cmd, function(error, stdout, stderr) {
     console.log('web hook executed with output: %s \n %s', stdout, stderr);
+    res.send({result: 'ok'});
   });
 
 });
