@@ -11,6 +11,8 @@ var express = require('express')
 , numCPUs = require('os').cpus().length
 , path = require('path');
 
+var exec = require('child_process').exec;
+
 var app = express();
 
 app.configure(function(){
@@ -30,6 +32,15 @@ app.configure('development', function(){
 });
 
 app.get('/widget/:type', widget.widget);
+
+app.get('/github/webhook',function(req, res){
+  var cmd = 'cd /var/www/fnil.net; /usr/bin/git pull';
+
+  exec(cmd, function(error, stdout, stderr) {
+    console.log('web hook executed with output: %s \n %s', stdout, stderr);
+  });
+
+});
 
 if (cluster.isMaster) {
 	// Fork workers.
