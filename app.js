@@ -33,7 +33,7 @@ app.configure('development', function(){
 
 app.get('/widget/:type', widget.widget);
 
-app.get('/github/webhook',function(req, res){
+app.post('/github/webhook',function(req, res){
   var cmd = 'cd /var/www/fnil.net; /usr/bin/git pull';
 
   exec(cmd, function(error, stdout, stderr) {
