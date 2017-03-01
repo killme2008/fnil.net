@@ -9,6 +9,7 @@ com.google.code.yanf4j.statistics.impl
 com.google.code.yanf4j.util
 net.rubyeye.xmemcached
 net.rubyeye.xmemcached.auth
+net.rubyeye.xmemcached.aws
 net.rubyeye.xmemcached.buffer
 net.rubyeye.xmemcached.codec
 net.rubyeye.xmemcached.command
@@ -21,4 +22,3 @@ net.rubyeye.xmemcached.monitor
 net.rubyeye.xmemcached.networking
 net.rubyeye.xmemcached.transcoders
 net.rubyeye.xmemcached.utils
-net.rubyeye.xmemcached.utils.hibernate
