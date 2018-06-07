@@ -7,6 +7,7 @@ com.googlecode.aviator.exception
 com.googlecode.aviator.lexer
 com.googlecode.aviator.lexer.token
 com.googlecode.aviator.parser
+com.googlecode.aviator.runtime
 com.googlecode.aviator.runtime.function
 com.googlecode.aviator.runtime.function.math
 com.googlecode.aviator.runtime.function.seq
@@ -15,4 +16,5 @@ com.googlecode.aviator.runtime.function.system
 com.googlecode.aviator.runtime.op
 com.googlecode.aviator.runtime.type
 com.googlecode.aviator.script
+com.googlecode.aviator.spring
 com.googlecode.aviator.utils
