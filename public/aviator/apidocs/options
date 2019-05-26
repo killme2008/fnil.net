@@ -1,0 +1,24 @@
+-classpath
+'/home/dennis/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/dennis/.m2/repository/org/springframework/spring-beans/4.3.16.RELEASE/spring-beans-4.3.16.RELEASE.jar:/home/dennis/.m2/repository/org/springframework/spring-context/4.3.16.RELEASE/spring-context-4.3.16.RELEASE.jar:/home/dennis/.m2/repository/org/springframework/spring-expression/4.3.16.RELEASE/spring-expression-4.3.16.RELEASE.jar:/home/dennis/.m2/repository/commons-beanutils/commons-beanutils/1.9.3/commons-beanutils-1.9.3.jar:/home/dennis/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/home/dennis/.m2/repository/org/springframework/spring-core/4.3.16.RELEASE/spring-core-4.3.16.RELEASE.jar:/home/dennis/.m2/repository/org/springframework/spring-aop/4.3.16.RELEASE/spring-aop-4.3.16.RELEASE.jar'
+-encoding
+'UTF-8'
+-protected
+-sourcepath
+'/home/dennis/programming/java/others/aviator/target/checkout/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2019. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'/home/dennis/programming/java/others/aviator/target/checkout/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'aviator 4.2.0 API'
+-linkoffline
+'http://docs.oracle.com/javase/7/docs/api' '/home/dennis/programming/java/others/aviator/target/checkout/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'aviator 4.2.0 API'
