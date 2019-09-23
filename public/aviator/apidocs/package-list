@@ -1,4 +1,5 @@
 com.googlecode.aviator
+com.googlecode.aviator.annotation
 com.googlecode.aviator.asm
 com.googlecode.aviator.asm.commons
 com.googlecode.aviator.code
