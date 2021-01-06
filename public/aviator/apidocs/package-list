@@ -10,12 +10,16 @@ com.googlecode.aviator.lexer.token
 com.googlecode.aviator.parser
 com.googlecode.aviator.runtime
 com.googlecode.aviator.runtime.function
+com.googlecode.aviator.runtime.function.internal
 com.googlecode.aviator.runtime.function.math
 com.googlecode.aviator.runtime.function.seq
 com.googlecode.aviator.runtime.function.string
 com.googlecode.aviator.runtime.function.system
+com.googlecode.aviator.runtime.module
 com.googlecode.aviator.runtime.op
 com.googlecode.aviator.runtime.type
+com.googlecode.aviator.runtime.type.seq
+com.googlecode.aviator.runtime.type.string
 com.googlecode.aviator.script
 com.googlecode.aviator.spring
 com.googlecode.aviator.utils
